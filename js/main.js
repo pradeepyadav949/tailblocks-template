@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         phone: phoneValue,
         email: emailValue,
         message: messageValue,
-        token: "a4b3c9e2f1a847d02bbf8e7a34c69dc2ea7c441263cdfed7c3c88d276f1d95d0"
+        token: "a4b3c9e2f1a847d02bbf8e7a34c69dc2ea7c441263cdfed7c3c88d276f1d95d0",
+        origin: window.location.origin
       };
 
       console.log("Form data to be sent:", data);
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbwj1mtoOGit3nf5LcYyx3CVxGFP3pXpqtTdWFf4hQkNYqpRE95Jz56cktgjVP3-tHe60A/exec", {
           method: "POST",
+          headers: { 'Origin': window.location.origin },
           body: JSON.stringify(data)
         });
 
