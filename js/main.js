@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         origin: window.location.origin
       };
 
-      console.log("Form data to be sent:", data);
+      // console.log("Form data to be sent:", data);
 
       try {
         const response = await fetch("https://script.google.com/macros/s/AKfycbwj1mtoOGit3nf5LcYyx3CVxGFP3pXpqtTdWFf4hQkNYqpRE95Jz56cktgjVP3-tHe60A/exec", {
